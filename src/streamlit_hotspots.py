@@ -57,8 +57,8 @@ st.markdown("""
 def load_data():
     """Load and cache the data for better performance."""
     try:
-        user_summary = pd.read_csv('user_summary.csv')
-        ride_summary = pd.read_csv('ride_summary.csv')
+        user_summary = pd.read_csv('../data/user_summary.csv')
+        ride_summary = pd.read_csv('../data/ride_summary.csv')
         return user_summary, ride_summary
     except FileNotFoundError as e:
         st.error(f"Data file not found: {e}")

@@ -140,7 +140,7 @@ class UberDataAnalyzer:
         plt.grid(True, alpha=0.3)
         
         plt.tight_layout()
-        plt.savefig('rides_per_user_histogram.png', dpi=300, bbox_inches='tight')
+        plt.savefig('../assets/rides_per_user_histogram.png', dpi=300, bbox_inches='tight')
         plt.show()
         
         # Calculate proportion of users with more than 1 ride per week
@@ -202,7 +202,7 @@ class UberDataAnalyzer:
         plt.axis('off')
         
         plt.tight_layout()
-        plt.savefig('distance_vs_rides_scatter.png', dpi=300, bbox_inches='tight')
+        plt.savefig('../assets/distance_vs_rides_scatter.png', dpi=300, bbox_inches='tight')
         plt.show()
         
         print(f"Correlation between weekly rides and average distance: {correlation:.3f}")
@@ -288,7 +288,7 @@ class UberDataAnalyzer:
         folium.LayerControl().add_to(m)
         
         # Save map
-        m.save('nyc_ride_hotspots.html')
+        m.save('../assets/nyc_ride_hotspots.html')
         print("Interactive map saved as 'nyc_ride_hotspots.html'")
         
         return m
@@ -299,12 +299,12 @@ class UberDataAnalyzer:
         
         # Export user summary
         user_export = self.user_summary.reset_index()
-        user_export.to_csv('user_summary.csv', index=False)
+        user_export.to_csv('../data/user_summary.csv', index=False)
         print(f"User summary exported: {len(user_export)} users")
         
         # Export ride summary for mapping
         ride_export = self.ride_summary.copy()
-        ride_export.to_csv('ride_summary.csv', index=False)
+        ride_export.to_csv('../data/ride_summary.csv', index=False)
         print(f"Ride summary exported: {len(ride_export)} location points")
         
         # Create additional summary statistics for Tableau
@@ -330,7 +330,7 @@ class UberDataAnalyzer:
                 self.user_summary['weekly_rides'].corr(self.user_summary['avg_distance_miles'])
             ]
         })
-        summary_stats.to_csv('summary_statistics.csv', index=False)
+        summary_stats.to_csv('../data/summary_statistics.csv', index=False)
         print("Summary statistics exported")
         
         print("\nExported files:")

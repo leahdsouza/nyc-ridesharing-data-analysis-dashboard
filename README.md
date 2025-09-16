@@ -1,117 +1,162 @@
-# NYC Ridesharing Data Analysis: Marketing Insights & Findings
+# NYC Ridesharing Data Analysis Dashboard
 
-## Executive Summary
+A comprehensive interactive dashboard for analyzing NYC ridesharing data with advanced visualizations, hotspot mapping, and predictive analytics.
 
-This analysis examines 15,120 rides from 100 users across 99 weeks to provide actionable insights for the marketing team. The data reveals a highly engaged user base with distinct usage patterns and geographic preferences that can inform strategic marketing decisions.
+## 🚀 Features
 
-## Key Findings
+- **Interactive Hotspot Mapping**: Visualize pickup and drop-off locations with clustering and heatmaps
+- **Advanced Analytics**: User behavior analysis, ride distribution patterns, and correlation insights
+- **Predictive Intelligence**: Demand forecasting and business intelligence recommendations
+- **Real-time Filtering**: Filter by weeks, location types, and other parameters
+- **Professional Visualizations**: High-quality charts and interactive maps
 
-### 1. User Engagement: 100% Heavy Users
-**Finding**: Every single user in the dataset takes more than 1 ride per week on average.
+## 📁 Project Structure
 
-**Implications for Marketing**:
-- **Focus on retention, not acquisition**: All users are already highly engaged
-- **Loyalty programs**: Implement rewards for power users (200+ rides)
-- **Upselling opportunities**: Heavy users are prime candidates for premium services
-- **Referral programs**: Engaged users are more likely to refer others
+```
+nyc-ridesharing-data-analysis-dashboard/
+├── src/                          # Main source code
+│   ├── __init__.py              # Package initialization
+│   ├── streamlit_hotspots.py    # Interactive Streamlit dashboard
+│   └── uber_analysis.py         # Data analysis and processing
+├── data/                        # Data files
+│   ├── user_summary.csv         # User-level metrics
+│   ├── ride_summary.csv         # Location data for mapping
+│   └── summary_statistics.csv   # Key metrics summary
+├── assets/                      # Generated visualizations
+│   ├── rides_per_user_histogram.png
+│   ├── distance_vs_rides_scatter.png
+│   └── nyc_ride_hotspots.html
+├── docs/                        # Documentation (future)
+├── requirements.txt             # Python dependencies
+├── setup.py                     # Package setup
+├── Makefile                     # Development commands
+├── .gitignore                   # Git ignore rules
+└── README.md                    # This file
+```
 
-### 2. Usage Patterns: Frequency vs Distance Independence
-**Finding**: No correlation (-0.003) between trip distance and usage frequency.
+## 🛠️ Installation
 
-**Marketing Insights**:
-- **Convenience-driven behavior**: Users choose the service for convenience, not distance
-- **Lifestyle integration**: Service fits into daily routines regardless of trip length
-- **Pricing strategy**: Focus on frequency-based incentives rather than distance-based
-- **Service positioning**: Emphasize reliability and convenience over cost-per-mile
+### Prerequisites
+- Python 3.8 or higher
+- pip package manager
 
-### 3. Geographic Distribution: Clear Origin-Destination Patterns
-**Finding**: Distinct separation between pickup locations (residential areas) and drop-off locations (commercial districts).
+### Quick Setup
+```bash
+# Clone the repository
+git clone <repository-url>
+cd nyc-ridesharing-data-analysis-dashboard
 
-**Strategic Implications**:
-- **Residential targeting**: Focus marketing on neighborhoods with high pickup density
-- **Commercial partnerships**: Target businesses in high drop-off areas
-- **Supply optimization**: Position drivers in residential areas during peak pickup times
-- **Demand forecasting**: Commercial areas need more drivers during business hours
+# Install dependencies
+make install
+# or
+pip install -r requirements.txt
 
-### 4. User Behavior Metrics
-- **Average rides per user**: 151.2 rides over the analysis period
-- **Average weekly rides**: 6.84 rides per user
-- **Average trip distance**: 4.41 miles
-- **User retention**: 100% of users maintain heavy usage patterns
+# Setup development environment
+make setup
+```
 
-## Marketing Recommendations
+## 🚀 Usage
 
-### Immediate Actions (0-3 months)
-1. **Launch loyalty program** for users with 200+ rides
-2. **Geographic targeting** campaigns in high-density pickup areas
-3. **Business partnerships** in commercial drop-off hotspots
-4. **Convenience-focused messaging** in all marketing materials
+### Run the Interactive Dashboard
+```bash
+make run-dashboard
+# or
+cd src && streamlit run streamlit_hotspots.py
+```
 
-### Medium-term Strategy (3-6 months)
-1. **Referral incentives** for existing heavy users
-2. **Premium service tiers** for power users
-3. **Dynamic pricing** based on usage frequency rather than distance
-4. **Supply-demand optimization** using geographic insights
+### Run Data Analysis
+```bash
+make run-analysis
+# or
+cd src && python uber_analysis.py
+```
 
-### Long-term Vision (6+ months)
-1. **Predictive analytics** for demand forecasting
-2. **Personalized marketing** based on usage patterns
-3. **Expansion planning** using hotspot analysis
-4. **Service innovation** based on user behavior insights
+### Available Commands
+```bash
+make help          # Show all available commands
+make install       # Install dependencies
+make setup         # Setup development environment
+make run-dashboard # Run the Streamlit dashboard
+make run-analysis  # Run data analysis
+make clean         # Clean generated files
+```
 
-## Data-Driven Insights
+## 📊 Dashboard Features
 
-### User Segmentation Opportunities
-- **Power Users (200+ rides)**: Premium service candidates
-- **Regular Users (50-200 rides)**: Loyalty program targets
-- **Frequent Users (20-50 rides)**: Upselling opportunities
-- **Occasional Users (<20 rides)**: Re-engagement campaigns
+### 🗺️ Hotspot Mapping
+- Interactive map with pickup (blue) and drop-off (red) locations
+- Clustering for better performance with large datasets
+- Heatmap overlay showing ride density
+- Layer controls for toggling different data views
 
-### Geographic Hotspots
-- **Residential clusters**: High pickup density areas for driver positioning
-- **Commercial zones**: High drop-off density areas for business partnerships
-- **Transit hubs**: Potential integration opportunities
-- **Underserved areas**: Expansion opportunities
+### 📈 Analytics Dashboard
+- **Weekly Trends**: Animated charts showing ride patterns over time
+- **Distribution Analysis**: Pie charts and histograms of ride types
+- **User Intelligence**: User behavior analysis and engagement metrics
+- **Predictive Insights**: Demand forecasting and business recommendations
 
-### Temporal Patterns
-- **Peak usage weeks**: Campaign timing optimization
-- **Seasonal trends**: Resource allocation planning
-- **User acquisition timing**: When new users are most likely to convert
+### 🎛️ Interactive Controls
+- Week selection for time-based filtering
+- Location type filtering (pickups vs drop-offs)
+- Clustering threshold adjustment
+- Multiple analysis views
 
-## Technical Implementation
+## 📋 Data Requirements
 
-### Interactive Dashboard Features
-- **Real-time filtering** by time periods and location types
-- **Geographic visualization** with clear pickup/drop-off distinction
-- **User behavior analysis** with interactive charts
-- **Performance metrics** with live updates
+The dashboard expects the following CSV files in the `data/` directory:
+- `user_summary.csv`: User-level metrics and statistics
+- `ride_summary.csv`: Location data for mapping and visualization
 
-### Data Quality
-- **100% data completeness** for all key metrics
-- **Geographic accuracy** within NYC bounds
-- **Temporal consistency** across 99 weeks
-- **User identification** with unique customer IDs
+## 🔧 Development
 
-## Business Impact
+### Project Structure
+- `src/`: Contains all Python source code
+- `data/`: Contains input data files (CSV format)
+- `assets/`: Contains generated visualizations and outputs
+- `docs/`: Future documentation directory
 
-### Revenue Optimization
-- **Retention focus**: 100% heavy users reduce churn risk
-- **Upselling potential**: High engagement enables premium pricing
-- **Geographic efficiency**: Optimized driver positioning reduces costs
-- **Demand prediction**: Better resource allocation improves margins
+### Dependencies
+Key dependencies include:
+- `streamlit`: Web application framework
+- `plotly`: Interactive visualizations
+- `folium`: Interactive maps
+- `pandas`: Data manipulation
+- `numpy`: Numerical computing
+- `matplotlib` & `seaborn`: Static visualizations
 
-### Competitive Advantage
-- **User insights**: Deep understanding of behavior patterns
-- **Geographic intelligence**: Strategic location-based decisions
-- **Predictive capabilities**: Data-driven forecasting
-- **Personalization**: Targeted marketing based on usage patterns
+## 📈 Key Metrics
 
-## Conclusion
+The dashboard analyzes and visualizes:
+- **15,120 total rides** across the dataset
+- **30,240 location points** (origins and destinations)
+- **100% heavy users** (users with >1 ride per week)
+- **99 weeks** of comprehensive data coverage
 
-The analysis reveals a highly engaged user base with clear patterns that can drive strategic marketing decisions. The independence of usage frequency from trip distance suggests users value convenience over cost, while geographic patterns provide clear targeting opportunities for both marketing and operations.
+## 🎯 Business Intelligence
 
-**Key Takeaway**: Focus on retention and convenience rather than acquisition and distance-based pricing. The data shows users are already highly engaged and value the service for its convenience and reliability.
+The dashboard provides strategic insights including:
+- User engagement patterns and retention analysis
+- Geographic hotspots for marketing and operations
+- Demand forecasting and growth predictions
+- Competitive advantage analysis
+- Revenue potential calculations
+
+## 📝 License
+
+© 2024 Leah D'Souza • All Rights Reserved
+
+This project contains proprietary analysis and insights. Unauthorized distribution is prohibited.
+
+## 🤝 Contributing
+
+This is a private project. For collaboration or questions, please contact the author.
+
+## 📞 Support
+
+For technical support or questions about the dashboard, please contact:
+- Author: Leah D'Souza
+- Email: leah@example.com
 
 ---
 
-*Analysis based on 15,120 rides from 100 users across 99 weeks. Interactive dashboard available at http://localhost:8501*
+*Built with Streamlit & Plotly • Powered by Advanced Analytics*
