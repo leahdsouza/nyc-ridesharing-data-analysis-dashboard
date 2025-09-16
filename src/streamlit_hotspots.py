@@ -1,15 +1,4 @@
 #!/usr/bin/env python3
-"""
-NYC Ridesharing Hotspots - Interactive Streamlit Dashboard
-=========================================================
-
-Interactive dashboard for visualizing NYC ride hotspots with filtering,
-clustering, and detailed analysis capabilities.
-
-Author: Data Science Assistant
-Date: 2024
-"""
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -65,7 +54,7 @@ def load_data():
         st.stop()
 
 def create_hotspot_map(ride_data, selected_weeks=None, selected_type=None, cluster_size=50):
-    """Create an interactive map with ride hotspots."""
+
     
     # Filter data based on selections
     filtered_data = ride_data.copy()
@@ -403,7 +392,7 @@ def create_user_analysis_chart(user_data, selected_weeks=None):
     return fig
 
 def create_predictive_insights(user_data, ride_data):
-    """Create predictive analytics and insights."""
+    """Predictive analytics and insights."""
     
     # Calculate predictive metrics
     total_users = len(user_data)
@@ -527,9 +516,7 @@ def main():
     # Add subtitle with key insights and trademark
     st.markdown("""
     <div style='text-align: center; margin-bottom: 2rem; padding: 1rem; background: linear-gradient(90deg, #1f77b4, #ff7f0e); border-radius: 10px; color: white;'>
-        <h3 style='margin: 0; color: white;'>🎯 100% Heavy Users • 📊 15,120 Rides Analyzed • 🗺️ 30,240 Location Points</h3>
-        <p style='margin: 0.5rem 0 0 0; color: white; opacity: 0.9;'>Advanced Analytics for Strategic Decision Making</p>
-        <p style='margin: 0.5rem 0 0 0; color: white; opacity: 0.8; font-size: 0.9em;'>© 2024 Leah D'Souza • All Rights Reserved</p>
+        <h3 style='margin: 0; color: white;'>📊 15,120 Rides Analyzed • 🗺️ 30,240 Location Points</h3>
     </div>
     """, unsafe_allow_html=True)
     
@@ -738,10 +725,8 @@ def main():
     st.markdown("---")
     st.markdown("""
     <div style='text-align: center; color: #666; padding: 2rem 0;'>
-        <h4 style='color: #1f77b4; margin-bottom: 0.5rem;'>NYC Ridesharing Intelligence Dashboard</h4>
         <p style='margin: 0.5rem 0; font-size: 0.9em;'>Built with Streamlit & Plotly • Powered by Advanced Analytics</p>
-        <p style='margin: 0.5rem 0; font-size: 0.8em; color: #888;'>© 2024 Leah D'Souza • All Rights Reserved • Confidential & Proprietary</p>
-        <p style='margin: 0.5rem 0; font-size: 0.8em; color: #888;'>This dashboard contains proprietary analysis and insights</p>
+        <p style='margin: 0.5rem 0; font-size: 0.8em; color: #888;'>© 2024 Leah Dsouza • All Rights Reserved</p>
     </div>
     """, unsafe_allow_html=True)
 
