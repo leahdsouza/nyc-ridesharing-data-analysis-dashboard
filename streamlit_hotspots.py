@@ -28,7 +28,6 @@ warnings.filterwarnings('ignore')
 # Page configuration
 st.set_page_config(
     page_title="NYC Ridesharing Intelligence Dashboard",
-    page_icon="🚗",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -525,11 +524,12 @@ def main():
     st.markdown('<h1 class="main-header">🚗 NYC Ridesharing Intelligence Dashboard</h1>', 
                 unsafe_allow_html=True)
     
-    # Add subtitle with key insights
+    # Add subtitle with key insights and trademark
     st.markdown("""
     <div style='text-align: center; margin-bottom: 2rem; padding: 1rem; background: linear-gradient(90deg, #1f77b4, #ff7f0e); border-radius: 10px; color: white;'>
         <h3 style='margin: 0; color: white;'>🎯 100% Heavy Users • 📊 15,120 Rides Analyzed • 🗺️ 30,240 Location Points</h3>
         <p style='margin: 0.5rem 0 0 0; color: white; opacity: 0.9;'>Advanced Analytics for Strategic Decision Making</p>
+        <p style='margin: 0.5rem 0 0 0; color: white; opacity: 0.8; font-size: 0.9em;'>© 2024 Leah D'Souza • All Rights Reserved</p>
     </div>
     """, unsafe_allow_html=True)
     
@@ -737,8 +737,11 @@ def main():
     # Footer
     st.markdown("---")
     st.markdown("""
-    <div style='text-align: center; color: #666;'>
-        <p>NYC Ridesharing Hotspots Dashboard | Built with Streamlit & Plotly</p>
+    <div style='text-align: center; color: #666; padding: 2rem 0;'>
+        <h4 style='color: #1f77b4; margin-bottom: 0.5rem;'>NYC Ridesharing Intelligence Dashboard</h4>
+        <p style='margin: 0.5rem 0; font-size: 0.9em;'>Built with Streamlit & Plotly • Powered by Advanced Analytics</p>
+        <p style='margin: 0.5rem 0; font-size: 0.8em; color: #888;'>© 2024 Leah D'Souza • All Rights Reserved • Confidential & Proprietary</p>
+        <p style='margin: 0.5rem 0; font-size: 0.8em; color: #888;'>This dashboard contains proprietary analysis and insights</p>
     </div>
     """, unsafe_allow_html=True)
 
