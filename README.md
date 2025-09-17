@@ -1,8 +1,8 @@
 # NYC Ridesharing Data Analysis Dashboard
 
 A comprehensive interactive dashboard for analyzing NYC ridesharing data with advanced visualizations, hotspot mapping, and predictive analytics.
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-brightgreen?style=for-the-badge&logo=streamlit)]([https://your-demo-link.com](https://leahdsouza-nyc-ridesharing.streamlit.app/))
 
+🔗 Try it out here → [NYC Ride Sharing Analysis Website](https://github.com/leahdsouza/nyc-ridesharing-data-analysis-dashboard)
 ## 🚀 Features
 
 - **Interactive Hotspot Mapping**: Visualize pickup and drop-off locations with clustering and heatmaps
