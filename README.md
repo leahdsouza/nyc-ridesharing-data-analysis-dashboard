@@ -10,29 +10,6 @@ A comprehensive interactive dashboard for analyzing NYC ridesharing data with ad
 - **Real-time Filtering**: Filter by weeks, location types, and other parameters
 - **Professional Visualizations**: High-quality charts and interactive maps
 
-## 📁 Project Structure
-
-```
-nyc-ridesharing-data-analysis-dashboard/
-├── src/                          # Main source code
-│   ├── __init__.py              # Package initialization
-│   ├── streamlit_hotspots.py    # Interactive Streamlit dashboard
-│   └── uber_analysis.py         # Data analysis and processing
-├── data/                        # Data files
-│   ├── user_summary.csv         # User-level metrics
-│   ├── ride_summary.csv         # Location data for mapping
-│   └── summary_statistics.csv   # Key metrics summary
-├── assets/                      # Generated visualizations
-│   ├── rides_per_user_histogram.png
-│   ├── distance_vs_rides_scatter.png
-│   └── nyc_ride_hotspots.html
-├── docs/                        # Documentation (future)
-├── requirements.txt             # Python dependencies
-├── setup.py                     # Package setup
-├── Makefile                     # Development commands
-├── .gitignore                   # Git ignore rules
-└── README.md                    # This file
-```
 
 ## 🛠️ Installation
 
@@ -43,7 +20,7 @@ nyc-ridesharing-data-analysis-dashboard/
 ### Quick Setup
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/leahdsouza/nyc-ridesharing-data-analysis-dashboard.git
 cd nyc-ridesharing-data-analysis-dashboard
 
 # Install dependencies
@@ -141,22 +118,3 @@ The dashboard provides strategic insights including:
 - Competitive advantage analysis
 - Revenue potential calculations
 
-## 📝 License
-
-© 2024 Leah D'Souza • All Rights Reserved
-
-This project contains proprietary analysis and insights. Unauthorized distribution is prohibited.
-
-## 🤝 Contributing
-
-This is a private project. For collaboration or questions, please contact the author.
-
-## 📞 Support
-
-For technical support or questions about the dashboard, please contact:
-- Author: Leah D'Souza
-- Email: leah@example.com
-
----
-
-*Built with Streamlit & Plotly • Powered by Advanced Analytics*
